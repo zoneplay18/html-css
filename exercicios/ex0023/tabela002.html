@@ -10,15 +10,31 @@
         }
         table {
             width: 500px;
+            border-collapse: collapse;
+            position: relative;
         }
         td, th {
             border: 1px solid black;
             padding: 8px;
             
         }
+        caption {
+            font-size: 1.5em;
+            padding: 10px;
+            font-weight: bold;
+            background-color: lightgray;
+        }
         thead, tfoot {
-            background-color: gray;
+            background-color: rgb(51, 51, 51);
             color: white;
+        }
+        thead > tr> th {
+            position: sticky;
+            top: -1px;
+            background-color: rgb(51, 51, 51);
+        }
+        tbody > tr:nth-child(odd) {
+            background-color: lightgray;
         }
         td.num {
             text-align: right;
@@ -30,6 +46,7 @@
     <!-- 
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY
@@ -38,11 +55,12 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
-                <th>% do total</th>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
+                <th scope="col">% do total</th>
             </tr>
         </thead>
         <tbody>
@@ -61,15 +79,137 @@
                 <td class="num">17 223 547</td>
                 <td class="num">8,07%</td>
             </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.873.064</td>
+                <td class="num">6,97</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11.433.957</td>
+                <td class="num">5,57%</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+                <td class="num">5,26%</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9.557.071</td>
+                <td class="num">4,48%</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">9.132.078</td>
+                <td class="num">4,34%</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8.602.865</td>
+                <td class="num">4,08%</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7.164.788</td>
+                <td class="num">3,84%</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">7.075.181</td>
+                <td class="num">3,29%</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7.018.354</td>
+                <td class="num">3,48%</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">4.144.597</td>
+                <td class="num">2,02%</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">4.018.650</td>
+                <td class="num">1,93%</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">4.018.127</td>
+                <td class="num">1,82%</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3.506.853</td>
+                <td class="num">1,62%</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3.484.466</td>
+                <td class="num">1,59%</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3.337.357</td>
+                <td class="num">1,51%</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">3.273.227</td>
+                <td class="num">1,59%</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num">3.015.268</td>
+                <td class="num">1,40%</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2.778.986</td>
+                <td class="num">1,37%</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2.298.696</td>
+                <td class="num">1,08%</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">1.777.225</td>
+                <td class="num">0,82%</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">1.572.866</td>
+                <td class="num">0,74%</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="num">881.935</td>
+                <td class="num">0,41%</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">845.731</td>
+                <td class="num">0,38%</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">605.761</td>
+                <td class="num">0,38%</td>
+            </tr>
 
         </tbody>
         <tfoot>
             <tr>
-                <td>total de habitantes</td>
-                <td class="num"><strong>84.698.789</strong></td>
-                <td class="num"><strong>39,68%</strong></td>
+                <th scope="row">total de habitantes</th>
+                <td class="num"><strong>213 421 037</strong></td>
+                <td class="num"><strong>100%</strong></td>
             </tr>
+            
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde in fugiat velit, ab est eaque quasi at aspernatur expedita nulla corrupti quae! Laboriosam tenetur ducimus perspiciatis veniam. Officiis, voluptatum necessitatibus?</p>
 </body>
 </html>
