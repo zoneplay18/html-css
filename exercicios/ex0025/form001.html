@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Formulário</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif
+        }
+    </style>
+    <!-- 
+    *Comentário: 
+        *action="" -> Define o destino dos dados do formulário.
+
+        *autocomplete="off" -> Desativa o preenchimento automático dos campos do formulário.
+
+        *label ou etiqueta -> Faz a associação entre o texto descritivo e o campo do formulário. facilitando os mecansimos de buscas e acessibilidade.
+
+        TODO:name -> mais Util para html e php.
+        TODO:id -> mais util pra javascript e label
+
+        *Existe dois metodos de envios:
+        * get e post
+
+        *GET -> Deixa visivel o conteúdo do formulário no link do site. além de serem compartilhaveis
+        TODO:COM LIMITE DE 3 MIL BYTES (OU LETRAS)
+
+        *Post -> Não deixa visivel o conteúdo do formulário no link do site.
+        TODO:mas tbm n significa q tá totalmente protegido 
+
+        ? Quando usar GET ou POST?
+        ?conteúdo sensivel (como email, senha, cartão de credito e etc)?
+        *POST
+        !GET
+        TODO: mas o ideal é estudar https.
+
+        ?O site tem mais de 3mil Bytes?
+        *se sim vai de POST
+        *caso contrario vai de GET
+
+        ?O site tem envios de arquivos?
+        *se sim. POST
+        *caso contrario. GET
+    -->
+</head>
+<body>
+    <h1>Meu Primeiro Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p>
+        <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
