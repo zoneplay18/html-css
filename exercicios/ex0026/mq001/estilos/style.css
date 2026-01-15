@@ -1,1 +1,39 @@
 @charset "UTF-8";
+
+/* * Estilos para telas */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+header {
+    background-color: lightgray
+}
+
+header > h1 {
+    text-align: center;
+}
+
+menu > ul {
+    list-style-type: none;
+    background-color: gray;
+}
+
+menu li {
+    display: inline-block;
+    background-color: rgb(75, 75, 75);
+    color: white;
+    padding: 10px;
+}
+
+article {
+    width: 600px;
+    display: block;
+    margin: auto;
+}
